@@ -81,8 +81,7 @@ Sign in to your Azure account. If this PowerShell command fails for some reason,
 Login-AzureRmAccount
 ```
 
-The following script will create a new resource group and/or a key vault if they are not already present.
-**Please note: if you're using an existing keyvault, it must be configured to support deployment, by using this script.**
+The following script will create a new resource group and/or a key vault if they are not already present.  (If key vault is to be created, make sure that vault name is all lowercase). **Please note: if you're using an existing keyvault, it must be configured to support deployment, by using this script.**
 ```
 Set-AzureRmKeyVaultAccessPolicy -VaultName <Name of the Vault> -ResourceGroupName <string> -EnabledForTemplateDeployment -EnabledForDeployment
 ```
@@ -114,7 +113,7 @@ Log in to your Azure account. If this PowerShell command fails for some reason, 
 Login-AzureRmAccount
 ```
 
-The following script will create a new resource group and/or key vault if they are not already present.
+The following script will create a new resource group and/or key vault if they are not already present. (If key vault is to be created, make sure that vault name is all lowercase).
 
 ```
 Invoke-AddCertToKeyVault -SubscriptionId <you subscription id> -ResourceGroupName <string> -Location <region> -VaultName <Name of the Vault> -CertificateName <Name of the Certificate> -Password <Certificate password> -CreateSelfSignedCertificate -DnsName <string- see note below.> -OutputPath <Full path to the .pfx file>
